@@ -5,19 +5,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-// DB 모델은 Entity라고 칭한다.
 @Entity
 @Getter @Setter
 @NoArgsConstructor
-@Table(name = "user")
-public class User {
+@Table(name = "folder")
+public class Folder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(nullable = false, length = 100, unique = true)
-    private String userId;
+    private Long folder_id;
 
     @Column(nullable = false, length = 100)
-    private String password;
+    private String folder_name;
+
+    @ManyToOne
+    @JoinColumn(name="id")
+    private User user;
 }
