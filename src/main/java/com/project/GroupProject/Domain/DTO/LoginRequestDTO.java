@@ -6,11 +6,11 @@ import lombok.Setter;
 
 @Getter @Setter
 @NoArgsConstructor
-public class RegisterRequestDTO {
+public class LoginRequestDTO {
     private String userId;
     private String password;
 
-    public RegisterRequestDTO(String userId, String password) {
+    public LoginRequestDTO(String userId, String password) {
         this.userId = userId;
         this.password = password;
     }
