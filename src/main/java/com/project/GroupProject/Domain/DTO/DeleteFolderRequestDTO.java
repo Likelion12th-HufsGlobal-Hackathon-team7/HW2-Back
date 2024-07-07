@@ -6,10 +6,6 @@ import lombok.Setter;
 
 @Getter @Setter
 @NoArgsConstructor
-public class LoginResponseDTO {
-    private Long idx;
-
-    public LoginResponseDTO(Long idx) {
-        this.idx = idx;
-    }
+public class DeleteFolderRequestDTO {
+    private Long folder_id;
 }

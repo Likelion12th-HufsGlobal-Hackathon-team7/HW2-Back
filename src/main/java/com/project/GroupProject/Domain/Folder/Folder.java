@@ -1,5 +1,7 @@
-package com.project.GroupProject.Domain.User;
+package com.project.GroupProject.Domain.Folder;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.project.GroupProject.Domain.User.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +20,7 @@ public class Folder {
     private String folder_name;
 
     @ManyToOne
-    @JoinColumn(name="id")
+    @JoinColumn(name = "idx")
+    @JsonIgnore
     private User user;
 }

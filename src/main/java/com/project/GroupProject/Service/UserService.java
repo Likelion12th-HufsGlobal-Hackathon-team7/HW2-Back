@@ -28,7 +28,7 @@ public class UserService {
         User selectedUser = userRepository.findByUserIdAndPassword(dto.getUserId(), dto.getPassword());
 
         if (selectedUser != null) {
-            return new LoginResponseDTO(selectedUser.getId());
+            return new LoginResponseDTO(selectedUser.getIdx());
         } else {
             throw new RuntimeException("존재하지 않는 회원입니다.");
         }
