@@ -14,7 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
+<<<<<<< HEAD
 @RequestMapping("/users")
+=======
+@RequestMapping("api/v1/users")
+>>>>>>> 9da23492aff19b42672bf871d6137d05e4f4ebae
 public class UserController {
     @Autowired
     private UserService userService;

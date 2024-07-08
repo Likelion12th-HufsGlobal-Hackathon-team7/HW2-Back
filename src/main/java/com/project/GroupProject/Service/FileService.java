@@ -42,22 +42,39 @@ public class FileService {
 
         File savedFile = fileRepository.save(newFile);
 
+<<<<<<< HEAD
         return new FileCreateResponseDTO(savedFile.getFile_id());
+=======
+        return new FileCreateResponseDTO(savedFile.getFileId());
+>>>>>>> 9da23492aff19b42672bf871d6137d05e4f4ebae
     }
 
     //파일 조회
     @Transactional
+<<<<<<< HEAD
     public FileCreateRequestDTO getFileById(Long file_id) {
         File file = fileRepository.findById(file_id)
                 .orElseThrow(() -> new ResourceNotFoundException("해당 파일을 찾을 수 없습니다."));
 
         return new FileCreateRequestDTO(file.getFile_id(),file.getFileTitle(), file.getFileContent());
+=======
+    public FileCreateRequestDTO getFileById(Long fileId) {
+        File file = fileRepository.findById(fileId)
+                .orElseThrow(() -> new ResourceNotFoundException("해당 파일을 찾을 수 없습니다."));
+
+        return new FileCreateRequestDTO(file.getFileId(),file.getFileTitle(), file.getFileContent());
+>>>>>>> 9da23492aff19b42672bf871d6137d05e4f4ebae
     }
 
     //파일 수정
     @Transactional
+<<<<<<< HEAD
     public FileCreateRequestDTO updateFile(Long file_id, FileUpdateDTO fileUpdateDTO) {
         File file = fileRepository.findById(file_id)
+=======
+    public FileCreateRequestDTO updateFile(Long fileId, FileUpdateDTO fileUpdateDTO) {
+        File file = fileRepository.findById(fileId)
+>>>>>>> 9da23492aff19b42672bf871d6137d05e4f4ebae
                 .orElseThrow(() -> new ResourceNotFoundException("해당 파일을 찾을 수 없습니다."));
 
         file.setFileTitle(fileUpdateDTO.getFileTitle());
@@ -65,6 +82,7 @@ public class FileService {
 
         File updatedFile = fileRepository.save(file);
 
+<<<<<<< HEAD
         return new FileCreateRequestDTO(updatedFile.getFile_id(), updatedFile.getFileTitle(), updatedFile.getFileContent());
     }
 
@@ -75,6 +93,9 @@ public class FileService {
                 .orElseThrow(() -> new ResourceNotFoundException("해당 파일을 찾을 수 없습니다."));
 
         fileRepository.deleteById(file_id);
+=======
+        return new FileCreateRequestDTO(updatedFile.getFileId(), updatedFile.getFileTitle(), updatedFile.getFileContent());
+>>>>>>> 9da23492aff19b42672bf871d6137d05e4f4ebae
     }
 
 }

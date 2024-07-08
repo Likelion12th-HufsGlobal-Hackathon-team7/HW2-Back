@@ -51,7 +51,12 @@ public class FileController {
     //파일삭제
     @DeleteMapping("/{file_id}")
     public ResponseEntity<Void> deleteFile(@PathVariable Long idx, @PathVariable Long file_id, @PathVariable Long folder_id, @RequestBody List<DeleteFolderRequestDTO> dto) {
+<<<<<<< HEAD
         fileService.deleteFile(file_id);
         return ResponseEntity.noContent().build();
+=======
+        folderService.deleteFolders(dto);
+        return ResponseEntity.ok().build();
+>>>>>>> 9da23492aff19b42672bf871d6137d05e4f4ebae
     }
 }

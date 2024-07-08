@@ -17,7 +17,11 @@ public class File {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+<<<<<<< HEAD
     private Long file_id;
+=======
+    private Long fileId;
+>>>>>>> 9da23492aff19b42672bf871d6137d05e4f4ebae
 
     @Column(nullable = false)
     private String fileTitle;
