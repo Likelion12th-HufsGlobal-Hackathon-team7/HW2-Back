@@ -18,7 +18,7 @@ import java.util.List;
 
 @RestController
 @NoArgsConstructor
-@RequestMapping("/folders")
+@RequestMapping("/api/v1/folders")
 public class FolderController {
     @Autowired
     private FolderService folderService;
